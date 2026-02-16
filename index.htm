@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAPD</title>
+
+<style>
+body{
+    font-family:'Segoe UI', sans-serif;
+    background:#eef3f9;
+    padding:40px;
+}
+
+/* CONTENEDOR GENERAL */
+.wrapper{
+    display:flex;
+    gap:40px;
+}
+
+/* COLUMNAS */
+.column-left{
+    flex:3;
+}
+
+.column-right{
+    flex:1.5;
+}
+
+/* TITULOS */
+.title{
+    text-align:center;
+    font-size:28px;
+    color:#3f51b5;
+    margin-bottom:8px;
+}
+
+.separator{
+    height:3px;
+    background:#3f51b5;
+    border-radius:3px;
+    margin-bottom:25px;
+}
+
+/* FILA */
+.row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:60px; /* ← altura fija para que todo coincida */
+    margin-bottom:25px;
+}
+
+/* TARJETA NOMBRE */
+.card{
+    flex:1;
+    background:#2a90b8;
+    border-radius:40px;
+    padding:0 25px;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    color:white;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* BADGE */
+.badge{
+    background:#4b4bd4;
+    padding:6px 16px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+/* TARJETA DIVISION */
+.div-card{
+    width:100%;
+    background:#b8d3dd;
+    border-radius:40px;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:600;
+    box-shadow:0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* COLORES ESPECIALES */
+.swat{
+    background:black;
+    color:white;
+}
+
+.instructor{
+    background:#28a745;
+    color:white;
+}
+
+/* ESPACIADO SECCION */
+.section{
+    margin-bottom:70px;
+}
+</style>
+</head>
+
+<body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAPD</title>
+
+<style>
+
+body{
+    font-family:'Segoe UI', sans-serif;
+    background:#eef3f9;
+    padding:40px;
+}
+
+/* ================= HEADER INSTITUCIONAL ================= */
+
+.main-header{
+    width:100%;
+    background:linear-gradient(135deg,#1e2f45,#2c4d7a);
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+    margin-bottom:60px;
+    border-radius:12px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.main-header h1{
+    font-size:44px;
+    margin:0;
+    letter-spacing:2px;
+    font-weight:700;
+}
+
+.header-line{
+    width:140px;
+    height:4px;
+    background:#4b8df8;
+    margin:20px auto;
+    border-radius:3px;
+}
+
+.subtitle{
+    font-size:17px;
+    opacity:0.95;
+    margin-bottom:15px;
+}
+
+.motto{
+    font-size:15px;
+    font-style:italic;
+    opacity:0.85;
+}
+
+/* ================= CONTENEDOR GENERAL ================= */
+
+.wrapper{
+    display:flex;
+    gap:40px;
+}
+
+/* COLUMNAS */
+
+.column-left{
+    flex:3;
+}
+
+.column-right{
+    flex:1.5;
+}
+
+/* TITULOS */
+
+.title{
+    text-align:center;
+    font-size:26px;
+    color:#2c4d7a;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.separator{
+    height:3px;
+    background:#2c4d7a;
+    border-radius:3px;
+    margin-bottom:25px;
+}
+
+/* FILA */
+
+.row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:60px;
+    margin-bottom:20px;
+}
+
+/* TARJETA NOMBRE */
+
+.card{
+    flex:1;
+    background:#2a90b8;
+    border-radius:40px;
+    padding:0 25px;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    color:white;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* BADGE */
+
+.badge{
+    background:#4b4bd4;
+    padding:6px 16px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+/* TARJETA DIVISION */
+
+.div-card{
+    width:100%;
+    background:#b8d3dd;
+    border-radius:40px;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:600;
+    box-shadow:0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* COLORES ESPECIALES */
+
+.swat{
+    background:black;
+    color:white;
+}
+
+.instructor{
+    background:#28a745;
+    color:white;
+}
+
+/* ESPACIADO SECCION */
+
+.section{
+    margin-bottom:70px;
+}
+
+</style>
+<!-- ================= HEADER ================= -->
+<header class="main-header">
+    <h1>Policía de San Andreas</h1>
+    <div class="header-line"></div>
+    <p class="subtitle">
+        Bienvenido a la Base de Datos Oficial de Jerarquía del Departamento de Policía de San Andreas (SAPD). En esta sección se encuentra centralizada y vinculada toda la información correspondiente al personal policial que ha prestado o presta servicio en cualquiera de las dependencias del Estado.
+
+Aquí se alojan los expedientes completos de oficiales activos, inactivos, retirados y en comisión de servicios especiales, junto con sus respectivas trayectorias, rangos alcanzados, méritos operativos, asignaciones notables y datos de contacto autorizados.
+
+Cada ficha ha sido cuidadosamente elaborada y mantenida por el Departamento de Recursos Humanos en conjunto con la División Administrativa, con el objetivo de garantizar transparencia, trazabilidad y acceso controlado a la información institucional.
+
+Estos expedientes están organizados de forma clara para facilitar la consulta por parte de mandos superiores, órganos de control, entes judiciales o personal autorizado dentro del marco legal vigente. El uso indebido de esta información será pasible de sanciones administrativas y/o penales según corresponda.
+
+Nota: Solo estarán en el apartado de ExPersonal oficiales quienes al presentar su renuncia solicitaran con anterioridad quedar registrados en dicho apartado, asimismo, personal vetado del departamento.
+
+Esta base se actualiza de forma periódica para reflejar cambios en el estatus del personal, nuevos ascensos, ingresos, retiros o reincorporaciones.
+
+SAPD – Para Servir, Salvar y Proteger.
+    </p>
+    <p class="motto">“Para Servir, Salvar y Proteger.”</p>
+</header>
+
+<div class="wrapper">
+
+<!-- AQUÍ VA TODO TU CONTENIDO ACTUAL -->
+<!-- No modifiqué nada de tu estructura interna -->
+
+</div>
+
+</body>
+</html>
+
+<div class="wrapper">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="column-left">
+
+
+
+
+
+
+<!-- ####################### COMISARIOS ####################### -->
+        <div class="section">
+            <div class="title">COMISARIOS</div>
+            <div class="separator"></div>
+
+            <div class="row">
+                <div class="card">
+                    David Mills
+                    <div class="badge">Cúpula Administrativa</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    Clarence Melford
+                    <div class="badge">Cúpula Administrativa</div>
+                </div>
+            </div>
+            
+             <div class="row">
+                <div class="card">
+                    Ele Saint
+                    <div class="badge">Cúpula Administrativa</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    Saint Ele
+                    <div class="badge">Cúpula Administrativa</div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <!-- ####################### INSPECTORES ####################### -->
+        <div class="section">
+            <div class="title">INSPECTORES</div>
+            <div class="separator"></div>
+
+            <div class="row">
+                <div class="card">
+                    Kendo Lockser
+                    <div class="badge">Cúpula Administrativa</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    Kenny Parker
+                    <div class="badge">Cúpula Administrativa</div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <!-- ####################### CAPITANES ####################### -->
+          <div class="section">
+            <div class="title">CAPITANES</div>
+            <div class="separator"></div>
+
+            <div class="row">
+                <div class="card">
+                    Dashy Woods
+                    <div class="badge">Cúpula Administrativa</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    Lumine Roldan
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        <!-- ####################### TENIENTES ####################### -->
+        <div class="section">
+            <div class="title">TENIENTES</div>
+            <div class="separator"></div>
+
+            <div class="row">
+                <div class="card">
+                    Carpe Diem
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                      Bastian Beckenbahuer
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+<!-- ####################### SARGENTOS ####################### -->
+        <div class="section">
+            <div class="title">SARGENTOS</div>
+            <div class="separator"></div>
+
+            <div class="row">
+                <div class="card">
+                    Alan Cronck
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    Celeste Dossantos
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card">
+                    Mike Holloway
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- ####################### CABOS ####################### -->
+        <div class="section">
+            <div class="title">CABOS</div>
+            <div class="separator"></div>
+
+            <div class="row">
+                <div class="card">
+                    Emilia Woods
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    Thiago Schneider
+
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- ####################### OFICIALES ####################### -->
+        <div class="section">
+            <div class="title">OFICIALES</div>
+            <div class="separator"></div>
+
+            <div class="row">
+                <div class="card">
+                   Jhon Connor
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    Harvey Worldstar
+
+                </div>
+            </div>
+            
+                        <div class="row">
+                <div class="card">
+                    Sebastian Causil
+
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <!-- ####################### CADETES ####################### -->
+        <div class="section">
+            <div class="title">CADETES</div>
+            <div class="separator"></div>
+
+            <div class="row">
+                <div class="card">
+                    Carolina Krawitz
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    William Handerson
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card">
+                    Ryuk Connor
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card">
+                   Makel Lopez
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card">
+                   Natalia Shawn
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card">
+                    Matteo Salvatore
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card">
+                   Finnea Anderson
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card">
+                    Ryan Schlatcher
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card">
+                    Hayden Reyes
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card">
+                    Keith Wadell
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+            <!-- ####################### ASPIRANTES ####################### -->
+        <div class="section">
+            <div class="title">ASPIRANTES</div>
+            <div class="separator"></div>
+
+
+            <div class="row">
+                <div class="card">
+                 Stive Hvitserk
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- COLUMNA DERECHA -->
+    <div class="column-right">
+            <!-- ####################### SECTOR CMS ####################### -->
+        <div class="section">
+            <div class="title">DIVISION</div>
+            <div class="separator"></div>
+
+            <div class="row"><div class="div-card instructor">INSTRUCTOR</div></div>
+            <div class="row"><div class="div-card instructor">INSTRUCTOR</div></div>
+            <div class="row"><div class="div-card">N/A</div></div>
+            <div class="row"><div class="div-card">N/A</div></div>
+        </div>
+        
+        
+        
+ <!-- ####################### SECTOR INSPECTORES ####################### -->
+        <div class="section">
+            <div class="title">DIVISION</div>
+            <div class="separator"></div>
+
+            <div class="row"><div class="div-card swat">SWAT</div></div>
+            <div class="row"><div class="div-card instructor">Instructor</div></div>
+        </div>
+        
+        
+        
+         <!-- ####################### SECTOR CAPITAN ####################### -->
+        <div class="section">
+            <div class="title">DIVISION</div>
+            <div class="separator"></div>
+
+            <div class="row"><div class="div-card swat">Lider S.W.A.T</div></div>
+            <div class="row"><div class="div-card swat">S.W.A.T</div></div>
+        </div>
+        
+        
+        
+         <!-- ####################### SECTOR TENIENTES ####################### -->
+        <div class="section">
+            <div class="title">DIVISION</div>
+            <div class="separator"></div>
+
+            <div class="row"><div class="div-card instructor">Instructor</div></div>
+            <div class="row"><div class="div-card">N/A</div></div>
+        </div>
+        
+        
+         <!-- ####################### SECTOR SARGENTOS ####################### -->
+        <div class="section">
+            <div class="title">DIVISION</div>
+            <div class="separator"></div>
+
+            <div class="row"><div class="div-card instructor">Lider Instructores</div></div>
+            <div class="row"><div class="div-card swat">S.W.A.T</div></div>
+             <div class="row"><div class="div-card">N/A</div></div>
+        </div>
+        
+        
+        
+         <!-- ####################### SECTOR CABOS ####################### -->
+        <div class="section">
+            <div class="title">DIVISION</div>
+            <div class="separator"></div>
+
+            <div class="row"><div class="div-card instructor">Instructor</div></div>
+            <div class="row"><div class="div-card instructor">Instructor</div></div>
+        </div>
+        
+        
+        
+         <!-- ####################### SECTOR OFICIALES ####################### -->
+        <div class="section">
+            <div class="title">DIVISION</div>
+            <div class="separator"></div>
+
+            <div class="row"><div class="div-card swat">S.W.A.T</div></div>
+            <div class="row"><div class="div-card swat">S.W.A.T</div></div>
+            <div class="row"><div class="div-card swat">S.W.A.T</div></div>
+        </div>
+        
+        
+         <!-- ####################### SECTOR CADETES ####################### -->
+        <div class="section">
+            <div class="title">DIVISION</div>
+            <div class="separator"></div>
+
+            <div class="row"><div class="div-card">N/A</div></div>
+            <div class="row"><div class="div-card">N/A</div></div>
+            <div class="row"><div class="div-card">N/A</div></div>
+            <div class="row"><div class="div-card">N/A</div></div>
+            <div class="row"><div class="div-card">N/A</div></div>
+            <div class="row"><div class="div-card">N/A</div></div>
+            <div class="row"><div class="div-card">N/A</div></div>
+            <div class="row"><div class="div-card">N/A</div></div>
+            <div class="row"><div class="div-card">N/A</div></div>
+            <div class="row"><div class="div-card">N/A</div></div>
+        </div>
+        
+              <!-- ####################### SECTOR ASP ####################### -->
+        <div class="section">
+            <div class="title">DIVISION</div>
+            <div class="separator"></div>
+
+            <div class="row"><div class="div-card">N/A</div></div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
